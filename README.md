@@ -1,4 +1,4 @@
-BF code: https://raw.githubusercontent.com/frerich/brainfuck/refs/heads/master/samples/mandelbrot.bf
+Test code: https://raw.githubusercontent.com/frerich/brainfuck/refs/heads/master/samples/mandelbrot.bf
 
 
 
