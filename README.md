@@ -1,6 +1,6 @@
 Test code source: https://raw.githubusercontent.com/frerich/brainfuck/refs/heads/master/samples/mandelbrot.bf
 
-This is also crazy cool: https://github.com/prapin/LuaBrainFuck/blob/master/brainfuck.lua
+This is also crazy cool (speedy transpiler): https://github.com/prapin/LuaBrainFuck/blob/master/brainfuck.lua
 
 
 
