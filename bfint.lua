@@ -84,6 +84,8 @@ w("    Remember, the keyboard interrupt is CTRL + C\n\n")
 r();
 -- (Courtesy of learnxinyminutes.com, bc I'm lazy)
 
+local bo, bc = string.byte("["), string.byte("]")
+
 local function run()
     -- Initial prompt
     w("\nEnter your code below:\n")
@@ -99,12 +101,14 @@ local function run()
         return
     end
 
+    local s_chars = table.pack(string.byte(s, 0, #s))
+    
     for i = 1, #s do
-        local char = s:sub(i, i)
+        local char = rawget(s_chars, i)
 
-        if char == "[" then
+        if char == bo then
             table.insert(loop_stack, i)
-        elseif char == "]" then
+        elseif char == bc then
             local n = table.remove(loop_stack) -- handy
 
             if n == nil then
@@ -122,9 +126,8 @@ local function run()
 
     local i = 1
     while i <= #s do
-        local char = s:sub(i, i)
         -- THESE BRACKETS
-        local jump = instructions[char](i)
+        local jump = instructions[string.char(rawget(s_chars, i))](i)
 
         if jump then
             i = jump + 1
