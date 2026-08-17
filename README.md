@@ -1,6 +1,6 @@
 > (Made without a tutorial)
 > 
->  (I Played w/ BF during a robotics meeting and decided to try making a simple interpreter with my best language)
+>  (I played w/ BF during a robotics meeting and decided to try making a simple interpreter with my best language)
 
 <br>
 
